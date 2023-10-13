@@ -8,8 +8,8 @@ import (
 
 func main() {
 	http.HandleFunc("/employee", get_employee_json)
-	fmt.Printf("API endpoint -> http://localhost:8080/employee")
-	http.ListenAndServe(":8080", nil)
+	fmt.Printf("API endpoint -> http://localhost:8081/employee")
+	http.ListenAndServe(":8081", nil)
 }
 
 type Employee struct {
@@ -20,10 +20,10 @@ type Employee struct {
 }
 
 var employees = map[string]Employee{
-	"0000000000": Employee{Id: "101", First: "Susan", Last: "Matthew", Department: "HR"},
-	"0000000001": Employee{Id: "102", First: "Bill", Last: "Gates", Department: "Finance"},
-	"0000000002": Employee{Id: "103", First: "Prateek", Last: "Singh", Department: "Engineering"},
-	"0000000003": Employee{Id: "104", First: "Rakesh", Last: "Singh", Department: "IT"},
+	"0000000000": Employee{Id: "101", First: "Akshitha", Last: "Meka", Department: "Data Analytics"},
+	"0000000001": Employee{Id: "102", First: "Bhargavi", Last: "Laveti", Department: "Data Analytics"},
+	"0000000002": Employee{Id: "103", First: "Keerthi", Last: "Dwevedi", Department: "Data Analyics"},
+	"0000000003": Employee{Id: "104", First: "Vamsi", Last: "Karri", Department: "Data Analytics"},
 }
 
 func get_employees() []Employee {
